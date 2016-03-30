@@ -15,3 +15,5 @@
 //= require_tree .
 
 import "babel-polyfill";
+import "./components/importer.jsx"
+import "./index.jsx"
