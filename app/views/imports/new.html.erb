@@ -1,0 +1,16 @@
+
+<%= form_tag do |f| %>
+  <%=
+    react_component(
+      'FileUploadInput',
+      form: {
+        action: f.action,
+        csrf_param: f.csrf_param,
+        csrf_token: f.csrf_token
+      },
+      placeHolder: "File...",
+      labelText: "Upload",
+      fieldName: "file_name"
+    )
+  %>
+<% end %>
