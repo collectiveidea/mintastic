@@ -1,14 +1,4 @@
 <h2>Upload Your Mint Export</h2>
 <%= form_for @import do |f| %>
-  <%=
-    react_component(
-      'FileUploadInput',
-      form: {
-        action: "new_import"
-      },
-      placeHolder: "File...",
-      labelText: "Upload",
-      fieldName: "file_name"
-    )
-  %>
+  <%= react_component('FileDropArea') %>
 <% end %>

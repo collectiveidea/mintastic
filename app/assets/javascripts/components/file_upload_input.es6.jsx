@@ -1,7 +1,8 @@
 class FileUploadInput extends React.Component {
   handleSubmit () {
     console.log('Submitted')
-  };
+  }
+
   render () {
     return (
       <form ref="form" className="upload-form" action={ this.props.form.action } acceptCharset="UTF-8" method="post" onSubmit={ this.handleSubmit }>
@@ -11,7 +12,7 @@ class FileUploadInput extends React.Component {
         </div>
         <button type="submit">Upload file</button>
       </form>
-    );
+    )
   }
 }
 
