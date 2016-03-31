@@ -1,17 +1,24 @@
-import { Dropzone } from "react-dropzone"
+React = require('react/addons');
+import component from './component.js'
+import Dropzone from 'react-dropzone';
 
-FileDropArea = React.createClass({
-  onDrop: function (files) {
-    console.log('Received files: ', files);
-  },
+const FileDropArea = React.createClass({
+    Dropzone: require('react-dropzone'),
 
-  render: function () {
-    return (
-      <div>
-        <Dropzone onDrop={this.onDrop}>
-          <div>Try dropping some files here, or click to select files to upload.</div>
-        </Dropzone>
-      </div>
-    );
-  }
+    onDrop: function (files) {
+      console.log('Received files: ', files);
+    },
+
+    render: function () {
+      return (
+          <div>
+            <Dropzone onDrop={this.onDrop}>
+              <div>Try dropping some files here, or click to select files to upload.</div>
+            </Dropzone>
+          </div>
+      );
+    }
 });
+
+module.exports = FileDropArea;
+
