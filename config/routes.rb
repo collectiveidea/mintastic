@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   root 'imports#new'
 
-  resources :imports, only: [:new]
+  resources :imports, only: [:index, :new]
 end
