@@ -16,8 +16,6 @@ class Import extends React.Component {
   }
 }
 
-export default Import;
-
 $(document).ready(function() {
   ReactDOM.render(<Import/>, document.getElementById('main'))
 })
