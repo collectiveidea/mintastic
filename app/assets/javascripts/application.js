@@ -16,3 +16,8 @@
 
 import "babel-polyfill";
 import "./containers/imports/new.es6.jsx"
+
+var React = window.React = global.React = require('react');
+var ReactDOM= window.ReactDOM = global.ReactDOM = require('react-dom');
+
+//= require react_ujs
