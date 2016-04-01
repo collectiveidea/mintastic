@@ -10,12 +10,15 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'virtus'
 
+gem "browserify-rails"
+
 group :development, :test do
   gem 'pry'
   gem 'pry-byebug'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'rspec-rails'
+  gem "teaspoon-jasmine"
 end
 
 group :development do
