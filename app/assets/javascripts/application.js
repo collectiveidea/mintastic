@@ -15,3 +15,4 @@
 //= require_tree .
 
 import "babel-polyfill";
+import "./containers/imports/new.es6.jsx"
