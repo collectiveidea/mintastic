@@ -6,6 +6,7 @@
 window.React = global.React = require('react');
 window.ReactDOM = global.ReactDOM = require('react-dom');
 
-// Manually import components and add them to window and global
+// Manually import components, then add them to window and global
+// so that react_ujs can find them and render them.
 import Import from "./components/import.es6.jsx"
 window.Import = global.Import = Import;
