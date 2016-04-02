@@ -16,5 +16,4 @@ class Import extends React.Component {
   }
 }
 
-export default Import;
-window.Import = Import;
+export default Import
