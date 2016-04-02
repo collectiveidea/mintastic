@@ -11,6 +11,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'virtus'
 
 gem "browserify-rails"
+gem "react-rails"
 
 group :development, :test do
   gem 'pry'
