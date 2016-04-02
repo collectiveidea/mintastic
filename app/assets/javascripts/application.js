@@ -1,10 +1,10 @@
+//= require_self
+//= require react-server
 //= require react_ujs
+//= require jquery_ujs
 
-// Required to make react_ujs work
-window.React = global.React = require('react');
-window.ReactDOM = global.ReactDOM = require('react-dom');
+window.$ = window.jQuery = global.$ = require('jquery');
+var React = window.React = global.React = require('react');
+var ReactDOM = window.ReactDOM = global.ReactDOM = require('react-dom');
 
-// Manually import components, then add them to window and global
-// so that react_ujs can find them and render them.
-import Import from "./components/import.es6.jsx"
-window.Import = global.Import = Import;
+require('./components');
