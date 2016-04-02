@@ -1,5 +1,3 @@
-//= require jquery
-//= require jquery_ujs
 //= require react_ujs
 
 // Required to make react_ujs work
