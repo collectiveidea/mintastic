@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Dropzone from 'react-dropzone';
 
-class Import extends React.Component {
+class FileUploadArea extends React.Component {
   onDrop (files) {
     console.log('Received files: ', files);
   }
@@ -16,4 +16,4 @@ class Import extends React.Component {
   }
 }
 
-export default Import
+export default FileUploadArea
