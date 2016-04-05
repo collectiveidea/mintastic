@@ -4,14 +4,28 @@ import Dropzone from 'react-dropzone';
 
 class FileUploadArea extends React.Component {
   onDrop (files) {
-    console.log('Received files: ', files);
+    var req = request.post('/upload');
+
+    req.on('progress', (e)=> {
+      console.log('Percentage done:', e.percent)
+    });
+
+    files.forEach((file)=> {
+      req.attach(file.name, file);
+    });
+
+    req.end(()=> {
+      console.log('Finished!')
+    });
   }
 
   render() {
     return (
-      <Dropzone onDrop={this.onDrop}>
-        <div>Try dropping some files here, or click to select files to upload.</div>
-      </Dropzone>
+      <div className="form-control">
+        <Dropzone onDrop={this.onDrop}>
+          <div>Drop files here</div>
+        </Dropzone>
+      </div>
     )
   }
 }

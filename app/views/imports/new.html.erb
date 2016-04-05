@@ -1,2 +1,11 @@
+<h1>Upload Your Account File</h1>
 
-<%= react_component('FileUploadArea') %>
+<p>
+  Drag you the CSV that you exported from Mint(TM) into the box below, or click
+  the box to browse for the file and select it.
+</p>
+
+<%= form_for(@import) do |f| %>
+  <%= f.hidden_field :file %>
+  <%= react_component('FileUploadArea', object_name: 'import', field_name: 'file') %>
+<% end %>
