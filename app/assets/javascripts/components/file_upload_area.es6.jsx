@@ -6,7 +6,7 @@ import axiosDefaults from 'axios/lib/defaults'
 
 class FileUploadArea extends React.Component {
   onDrop(files) {
-    var authenticityToken = $('#new_import').closest('form').find('input[name=authenticity_token]').val();
+    var authenticityToken = $('meta[name="csrf-token"]').attr('content');
     var instance = axios.create({
       timeout: 1000,
       headers: {'X-CSRF-Token': authenticityToken}

@@ -5,12 +5,10 @@
   the box to browse for the file and select it.
 </p>
 
-<%= form_for(@import) do |f| %>
-  <%=
-    react_component(
-      'FileUploadArea',
-      object_name: 'import', 
-      field_name: 'file'
-    )
-  %>
-<% end %>
+<%=
+  react_component(
+    'FileUploadArea',
+    object_name: 'import',
+    field_name: 'file'
+  )
+%>
