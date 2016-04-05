@@ -6,6 +6,11 @@
 </p>
 
 <%= form_for(@import) do |f| %>
-  <%= f.hidden_field :file %>
-  <%= react_component('FileUploadArea', object_name: 'import', field_name: 'file') %>
+  <%=
+    react_component(
+      'FileUploadArea',
+      object_name: 'import', 
+      field_name: 'file'
+    )
+  %>
 <% end %>

@@ -1,21 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Dropzone from 'react-dropzone';
+import axios from 'axios';
+import axiosDefaults from 'axios/lib/defaults'
 
 class FileUploadArea extends React.Component {
-  onDrop (files) {
-    var req = request.post('/upload');
-
-    req.on('progress', (e)=> {
-      console.log('Percentage done:', e.percent)
+  onDrop(files) {
+    var authenticityToken = $('#new_import').closest('form').find('input[name=authenticity_token]').val();
+    var instance = axios.create({
+      timeout: 1000,
+      headers: {'X-CSRF-Token': authenticityToken}
     });
 
-    files.forEach((file)=> {
-      req.attach(file.name, file);
-    });
-
-    req.end(()=> {
-      console.log('Finished!')
+    instance.post('/imports')
+    .then((response) => {
+      console.log(response);
+    })
+    .catch((response) => {
+      console.log(response);
     });
   }
 
