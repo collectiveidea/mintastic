@@ -15,7 +15,8 @@
     "jquery-ujs": "^1.2.1",
     "react": "^0.14.8",
     "react-dom": "^0.14.8",
-    "react-dropzone": "^3.3.2"
+    "react-dropzone": "^3.3.2",
+    "react-server": "^0.1.4"
   },
   "devDependencies": {},
   "scripts": {

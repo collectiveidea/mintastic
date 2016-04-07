@@ -1,5 +1,4 @@
 //= require_self
-//= require react-server
 //= require react_ujs
 
 window.$ = window.jQuery = global.$ = require('jquery');
